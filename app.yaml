@@ -24,4 +24,5 @@ skip_files:
   - \.gitignore
   - ^\.git/.*
   - ^(.*/)?.*\.kit$
-  - ^config/(.*/)?
+  - ^(.*/)?.*\.codekit3$
+  - ^build/(.*/)?
