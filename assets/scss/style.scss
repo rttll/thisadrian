@@ -21,6 +21,9 @@ nav {
   padding: 1rem;
   a {
     text-decoration: none;
+    &.active {
+      color: lightgreen;
+    }
   }
 }
 
@@ -28,12 +31,13 @@ nav {
 
 a {
   color: #111;
-  &:hover {
+  &:visited {
+    color: #d8d8d8;
     text-decoration: none;
   }
-  &:visited {
-    color: #666;
+  &:hover {
     text-decoration: none;
+    color: lightgreen;
   }
 }
 
@@ -105,11 +109,15 @@ button, .button {
   background: #fff;
   padding: 1rem;
   border: 1px solid #111;
+  color: #111;
   text-decoration: none;
   cursor: pointer;
   transition: color background-color .25s ease;
   &:focus {
-    outline: green;
+    outline: lightgreen;
+  }
+  &:visited {
+    color: #111;
   }
 
 }
