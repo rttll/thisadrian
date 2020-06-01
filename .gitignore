@@ -1,3 +1,4 @@
 .DS_Store
 graphics/
-config.codekit3
+node_modules
+dist
