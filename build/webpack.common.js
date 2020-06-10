@@ -1,24 +1,29 @@
 const path = require('path')
+const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+require("babel-polyfill");
 
+const hash = fs.readFileSync('./src/_data/hash', 'utf8')
 
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    'babel-polyfill', 
+    './src/index.js'
+  ],
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].[hash].bundle.js'
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '/',
+    filename: `assets/js/[name].${hash}.js`
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    }),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css'
+      filename: `assets/css/[name].${hash}.css`
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['**/*', '!*.html', '!*.png', '!*.jpg'],
+    }),
   ],
   module: {
     rules: [
@@ -28,11 +33,11 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/images/[name].[hash].[ext]'
+              name: `assets/images/[name].${hash}.[ext]`
             }
           }
         ],
-      },          
+      },        
       {
         test: /\.css$/,
         use: [
