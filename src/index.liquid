@@ -1,0 +1,41 @@
+--- 
+layout: default
+---
+   
+<div id="app" class="z-10 relative">
+  <div class="flex justify-end w-10/12">
+    <div class="w-5/12 flex flex-grow-0 border-gray-800 border-t-8 h-screen" style="height: 75vh">
+      <div class="m-auto">
+        <h1 class="text-4xl">Hi there, you made it.</h1>
+        <p class="text-2xl">
+          I'm Adrian, designer/developer, and <br />all-around human. </p>
+          <p class="text-2xl">
+          Make yourself at home and then 
+          <a href="">call me.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-10/12 m-auto flex items-stretch justify-start pt-12">
+    <div class="w-1/2 h-64 bg-gray-100">
+      <h2>A favoriate client project</h2>
+      <h2 class="text-2xl">Mapper</h2>
+      <img id="map" :src="images.map" alt="">
+      <a href="/views/map">map</a>
+    </div>
+    <div class="w-1/2 h-64 bg-gray-100">
+      <h2>A recent personal project</h2>
+      <h2 class="text-2xl">Faveslist</h2>
+      <img :src="images.faves" alt="">
+    </div>
+  </div>    
+
+  <div class="w-10/12 m-auto start pt-12">
+    {% include projects_nav %}  
+  </div>
+
+  {% include footer %}
+
+
+</div>

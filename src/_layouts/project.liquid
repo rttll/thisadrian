@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+  {% link "main" %}
+  <body class="text-gray-800 text-base">
+    <div class="w-10/12 m-auto start pt-12">
+      
+      <div class="my-4 cursor-pointer inline-block">
+        <div 
+          class="h-8 w-8 rotate-45 border-l-2 border-b-2 border-gray-500 hover:border-gray-700 transition-all relative transform rotate-45"
+          onclick="window.history.go(-1)"
+          >
+          <div 
+            class="h-8 w-4 rotate-45 border-l-2 border-gray-500 hover:border-gray-700 transform transition-all origin-center rotate-45 absolute"
+            style="right:6px;bottom:-10px">
+          </div>
+        </div>
+      </div>
+
+      
+      {{ content | safe }}
+      
+      {% include projects_nav %}
+  
+    </div>
+    
+    {% include footer %}
+    
+    <script src="/vendor/libgif.js"></script>
+    <script src="/vendor/rubbable.js"></script>
+    {% script "main" %}
+
+  </body>
+</html>

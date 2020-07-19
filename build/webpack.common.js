@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 require("babel-polyfill");
 
 const hash = fs.readFileSync('./src/_data/hash', 'utf8')
@@ -21,9 +22,14 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `assets/css/[name].${hash}.css`
     }),
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/*', '!*.html', '!*.png', '!*.jpg'],
-    }),
+    new CopyPlugin({
+      patterns: [
+        { from: './vendor/**/*', to: '' }
+      ],
+    }),    
+    // new CleanWebpackPlugin({
+    //   cleanOnceBeforeBuildPatterns: ['**/*', '!**/*.html', '!*.png', '!*.jpg'],
+    // }),
   ],
   module: {
     rules: [
