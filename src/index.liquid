@@ -2,53 +2,27 @@
 layout: default
 ---
    
-<div id="app">
-  <section class="flex items-stretch">
-    <div class="md:w-1/2 h-scren p-8 md:p-16">
-      <p class="text-3xl md:text-4xl font-semibold text-gray-200 leading-tight tet-justify">
-        Hi there, I'm <a href="" class="text-green-300">Adrian</a>.
-        It's satisfying to learn a new skill and then be able to use that skill to solve
-        a <a href="" class="text-green-300">business problem</a> later. I've decided to 
-        call myself a front-end developer here, because for one thing I like working on 
-        <a href="" class="text-green-300">with a team</a>, where I can connect the back-end logic
-        with the design. That said, I know my way around a 
-        <a href="" class="text-green-300">Rails app</a>, so maybe full-stack is more accurate.
-        But I am trying to focus more on the front and building
-        <a href="" class="text-green-300">
-          reactive UI's
-        </a>
-          , for example.
-        By the way, a lot of my work is private but I have a few side projects
-        on 
-        <a href="" class="text-green-300">
-          Github
-        </a>. 
-      </p>
-      <p class="text-3xl md:text-5xl font-semibold text-gray-100 leading-tight text-justify">
-        Thanks for stopping by!
-      </p>
+<div id="app" class="h-screen">
+  <section class="flex flex-col space-y-24 pt-32 md:w-1/2">
+    <div class="text-gray-100 text-2xl font-light pl-32">
+      <p>thisadrian.com</p>
+      <h1>Front-end developer</h1>
+      <p>707 : 123 : 1234</p>
+      <p>a : at : thisadrian : dot : com</p>
     </div>
-    <div class="md:w-1/2 h-screen relative p-8 md:p-16 bg-gray-20 mt-32 space-y-8">
-      <h2>Projects</h2>
-      <div class="border rounded shadow-md p-1 h-40 overflow-hidden">
-        {% img "zcastles.png" "" 'rel:auto_play="0"' %}
-      </div>
-      <div class="border rounded shadow-md p-1 h-40 overflow-hidden">
-        {% img "zcastles.png" "" 'rel:auto_play="0"' %}
-      </div>
-      <div class="border rounded shadow-md p-1 h-40 overflow-hidden">
-        {% img "zcastles.png" "" 'rel:auto_play="0"' %}
-      </div>
-      <div class="fixed bottom-0 right-0 p-4 text-right">
-        <p>
-        <a href="http://github.com/thisadrian">Github</a>
-        </p>
-        <a href="">a [at] thisadrian [dot] com</a>
-      </div>
+    <div class="text-gray-100 text-2xl font-light pl-32">
+      <h2>Client work</h2>
+      {% include projects_nav type: 'client' %}
+
     </div>
+    <div class="text-gray-100 text-2xl font-light pl-32">
+      <h2>Side work</h2>
+      {% include projects_nav type: 'side' %}
+    
+    </div>
+
   </section>
-  <div class="mb-64">&nbsp;</div>
-  {% comment %} {% include footer %} {% endcomment %}
+
   
 
 </div>

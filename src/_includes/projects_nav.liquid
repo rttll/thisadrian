@@ -1,20 +1,21 @@
 
+ <div class="flex flex-wrap">
 
 
-<h4 class="text-2xl mt-32 md:mt-40">Why not check out another project?</h4>
-<div class="flex flex-wrap" x-data="{ tags: ['personal'] }">
-  {% for project in projects %}
-    <div class="h-48 w-48 p-2 flex-grow-0 flex items-stretch" data-tags={{ project.tags }}>
-      <div class="w-full bg-blue-100 relative">
-      {% if project.thumb %}
-        {% capture src %}
-          {{project.thumb}}
-        {% endcapture %}
-        <a href={{project.path}} class="block w-full h-full img">
-          {% img src "object-cover object-center h-full" %}
+  {% for group in projects %}
+    {% if group[0] == type %}
+      {% for project in group[1] %}
+        <a href="{{project.path}}">
+          {{ project.title }}
         </a>
-      {% endif %}
-      </div>
-    </div>
+        {% if forloop.last == false %} 
+          <span> 
+            &nbsp; 
+            /
+            &nbsp; 
+          </span>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
   {% endfor %}
-</div>
+</div>   
