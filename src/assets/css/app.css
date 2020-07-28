@@ -15,7 +15,7 @@ a {
   z-index: 10;
 }
 
-a:hover:after {
+/* a:hover:after {
   transform: scaleY(.9);
 }
 
@@ -31,6 +31,6 @@ a:after {
   transform: scaleY(0.2);
   transform-origin: bottom;
   transition: all .15s ease-in;
-}
+} */
 
 a.img:after {display: none;}

@@ -2,16 +2,52 @@
 layout: project
 ---
 
-
-<div>
-  <h1 class="text-6xl">Tradeshow layout maker</h1>
-  <p class="text-2xl">
-    The wedding expo needed a mapping solution that would respond to last-minute changes.
-  </p>
-  <div class="w-1/2 border-4 border-gray-600 rounded-lg" id="map">
-    {% img "map.gif" "" 'rel:auto_play="0"' %}
+<div class="flex space-y-32 flex-col">
+  <div class="flex space-x-8">
+    <div class="w-1/2">
+      <div class="flex flex-row space-y-8">
+        <div>
+          <h1 class="text-xl mb-4 md:text-4xl font-semibold text-gray-700">
+            Web-based 
+            <span class="block md:inline">
+              event mappping
+            </span>
+          </h1>
+          <div class="flex flex-col space-y-4">
+            <p class="text-xl">
+              The Wedding Expo used to map their events on paper. The event mapping tool integrates all exhibitor application data, 
+              allowing for up-to-date accuracy. 
+            </p>
+            
+            <p class="text-xl">
+              It's a customized Leaflet.js map built on a Rails app, with a friendly mobile read-only version for on-the-ground use.
+              There's also a pdf export tool built with Puppeteer.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
-  <span id="play">Play</span>
-  <span id="pause" class="cursor-pointer">pause</span>
+
+  <div class="flex flex-col items-end w-full space-x-8">
+    <div class="bg-blue-300 w-2/3 h-64">
+      video goes here
+    </div>
+    
+  </div>
+
+  <div class="bg">
+
+    <h3 class="text-xl mb-4 md:text-4xl font-semibold text-gray-700 text-center">
+      Do you like clear communication?
+    </h3>
+
+    
+
+  </div>
+
 
 </div>
+<div class="mb-64"></div>

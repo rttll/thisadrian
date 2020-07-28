@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
-  {% link "main" %}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    {% link "main" %}
+  </head>
   <body class="text-gray-800 text-base">
     <div class="w-10/12 m-auto start pt-12">
       
@@ -21,17 +22,16 @@
         </div>
       </div>
 
+      <div class="w-full h-1 mb-16"></div>
+
       
       {{ content | safe }}
       
-      {% include projects_nav %}
   
     </div>
     
     {% include footer %}
     
-    <script src="/vendor/libgif.js"></script>
-    <script src="/vendor/rubbable.js"></script>
     {% script "main" %}
 
   </body>
