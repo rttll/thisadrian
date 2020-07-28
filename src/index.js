@@ -10,3 +10,14 @@ function importAllImages(r) {
 }
 
 const images = importAllImages();
+
+// (function() {
+
+//   window.addEventListener('scroll', () => {
+//     // let h = document.documentElement.getBoundingClientRect().top
+//     // let h = document.getElementsByTagName('html')[0].getBoundingClientRect().top
+//     let h = document.getElementsByTagName('html')[0].scrollTop
+//     console.log(h)
+//   })
+
+// })()

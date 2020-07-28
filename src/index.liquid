@@ -2,27 +2,31 @@
 layout: default
 ---
    
-<div id="app" class="h-screen">
-  <section class="flex flex-col space-y-24 pt-32 md:w-1/2">
-    <div class="text-gray-100 text-2xl font-light pl-32">
-      <p>thisadrian.com</p>
+<div id="app" class="">
+  <section class="flex flex-col space-y-24 pt-16 md:pt-24">
+    <div class="text-gray-100 text-2xl font-light pl-12 md:pl-24 md:w-2/3">
       <h1>Front-end developer</h1>
-      <p>707 : 123 : 1234</p>
-      <p>a : at : thisadrian : dot : com</p>
+      <div class="leading-tigh text-lg mt-2">
+        <p>707 : 123 : 1234</p>
+        <p>a : at : thisadrian : dot : com</p>
+        <p>
+          <a href="https://github.com/thisadrian" class="hover:text-indigo-300">
+          Find me on Github
+          </a>
+        </p>
+      </div>
     </div>
-    <div class="text-gray-100 text-2xl font-light pl-32">
-      <h2>Client work</h2>
+    <div class="text-gray-100 text-3xl font-light pl-12 md:pl-24 md:w-2/3">
+      <h2 class="text-gray-300 uppercase text-lg">&rarr; Client work</h2>
       {% include projects_nav type: 'client' %}
 
     </div>
-    <div class="text-gray-100 text-2xl font-light pl-32">
-      <h2>Side work</h2>
+    <div class="text-gray-100 text-3xl font-light pl-12 md:pl-24 md:w-2/3">
+      <h2 class="uppercase text-lg">&rarr; Side work</h2>
       {% include projects_nav type: 'side' %}
     
     </div>
 
   </section>
-
   
-
 </div>

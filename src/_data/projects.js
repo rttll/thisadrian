@@ -3,29 +3,37 @@ module.exports = function() {
   return {
     side: [
       {
-        title: 'Real Estate ap',
+        title: 'Real Estate app',
         path: "/zcastles",
         live_url: 'http://zcastles.thisadrian.com/',
         tags: ['personal', 'webapp']
       },
       {
-        title: "Spotify Mac app",
+        title: "Spotify app",
         path: "/",
         tags: ['personal', 'Mac app', 'website']
       },
       {
-        title: "Chat",
+        title: "Chat app",
         path: "/",
         tags: ['personal', 'Mac app', 'website']
       }
     ],
     client: [
       {
-        title: "Tradeshow layout mapper",
+        title: "Event map",
         path: "/map"
       },
       {
-        title: "Texting",
+        title: "Registration kiosk",
+        path: "/map"
+      },
+      {
+        title: "Billing system",
+        path: "/map"
+      },
+      {
+        title: "SMS dashboard",
         path: "/switchboard",
       },
       {
@@ -33,11 +41,11 @@ module.exports = function() {
         path: "/views/staffing",
       },
       {
-        title: "Reactive sign-up form",
+        title: "Reactive Form",
         path: "booth-app"
       },
       {
-        title: "Ellington Events website",
+        title: "Marketing site (sp)",
         path: "/views/ellington",
         url: "https://s3-us-west-2.amazonaws.com/ellingtonevents.com/index.html"
       },

@@ -1,21 +1,25 @@
 
- <div class="flex flex-wrap">
+ <div class="flex flex-wrap mt-2 leading-snug">
 
 
   {% for group in projects %}
     {% if group[0] == type %}
-      {% for project in group[1] %}
-        <a href="{{project.path}}">
-          {{ project.title }}
-        </a>
-        {% if forloop.last == false %} 
-          <span> 
-            &nbsp; 
-            /
-            &nbsp; 
-          </span>
-        {% endif %}
-      {% endfor %}
+      <ul>
+        {% for project in group[1] %}
+          <li class="w-full md:w-auto md:inline-block">
+            <a href="{{project.path}}" class="hover:text-indigo-300">
+              {{ project.title }}
+            </a>
+            {% if forloop.last == false %} 
+              <span class="invisible md:visible"> 
+                &nbsp; 
+                :
+                &nbsp; 
+              </span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     {% endif %}
   {% endfor %}
 </div>   
