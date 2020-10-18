@@ -2,3 +2,7 @@
 /www
 /build
 config.codekit3
+
+dist
+graphics
+node_modules
