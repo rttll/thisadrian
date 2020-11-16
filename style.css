@@ -1,0 +1,140 @@
+html, html * {
+  box-sizing: border-box;   
+}
+
+html, body {
+  box-sizing: border-box;   
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 150%;
+  color: #333D;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .7rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: lightseagreen
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray
+}
+
+a.logo, a.logo:hover, a.logo:visited {
+  color: #333d;
+  text-decoration: none;
+}
+
+small {
+  font-size: 60%;
+}
+
+li {
+  list-style: none
+}
+
+.text-right {
+  text-align: right;
+}
+
+.inline-block {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+.icon {
+  width: 20px; 
+  height: 20px;
+}
+
+.label {
+  background: pink;
+  padding: .3rem .7rem;
+  border-radius: 25px;
+  color: #333;
+  font-size: .5rem;
+  letter-spacing: 1px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.center {
+  align-items: center;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.gap-y {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.gap-x {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.gap {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .gap {
+    padding: 2rem;
+  }
+}
+
+section {
+  height: 70vh;
+}
+
+.translate-up {
+  transform: translateY(-4rem)
+}
+
+@media screen and (min-width: 800px) {
+  .squeeze {
+    width: 60%;
+  }
+}
+  
+
+#foo {
+  background: url(https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80);
+  background-clip: content-box;
+  height: 600px;
+  /* transform: rotate(-5deg) */
+}
