@@ -9,7 +9,9 @@
   "scripts": {
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "build": "gridsome build"
+    "build": "gridsome build",
+    "sanity:start": "cd ./sanity && sanity start",
+    "sanity:build": "cd ./sanity && sanity build"
   },
   "dependencies": {
     "gridsome": "^0.7.0"
