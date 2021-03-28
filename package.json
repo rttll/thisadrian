@@ -1,0 +1,17 @@
+{
+  "name": "thisadrian",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "repository": "github.com/thisadrian/thisadrian",
+  "author": "Adrian <a@thisadrian.com>",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0"
+  }  
+}
