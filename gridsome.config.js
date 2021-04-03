@@ -6,5 +6,5 @@
 
 module.exports = {
   siteName: 'thisadrian',
-  plugins: [],
+  plugins: [{ use: 'gridsome-plugin-tailwindcss' }],
 };
