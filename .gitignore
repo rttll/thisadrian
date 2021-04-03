@@ -2,5 +2,7 @@
 node_modules
 dist
 
+_graphics
+
 # Sanity
 sanity/node_modules
