@@ -7,4 +7,8 @@ _graphics
 # Sanity
 sanity/node_modules
 
+# vercel info
 .vercel/
+
+# next.js builds
+.next
