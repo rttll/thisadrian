@@ -3,6 +3,7 @@ node_modules
 dist
 src/.temp
 _graphics
+tmp/
 
 # Sanity
 sanity/node_modules
@@ -12,3 +13,6 @@ sanity/node_modules
 
 # next.js builds
 .next
+
+# env vars
+.env
