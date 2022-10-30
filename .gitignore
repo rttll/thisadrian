@@ -3,8 +3,16 @@ node_modules
 dist
 src/.temp
 _graphics
+tmp/
 
 # Sanity
 sanity/node_modules
 
+# vercel info
 .vercel/
+
+# next.js builds
+.next
+
+# env vars
+.env
