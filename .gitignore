@@ -16,3 +16,4 @@ sanity/node_modules
 
 # env vars
 .env
+.vercel

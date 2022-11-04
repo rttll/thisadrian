@@ -49,11 +49,11 @@ export default defineType({
       title: 'Body',
       type: 'blockContent',
     }),
-    defineField({
-      name: 'code',
-      title: 'Code',
-      type: 'code',
-    }),
+    // defineField({
+    //   name: 'code',
+    //   title: 'Code',
+    //   type: 'code',
+    // }),
   ],
 
   preview: {

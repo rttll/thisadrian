@@ -1,5 +1,6 @@
 import { groq } from 'next-sanity';
 import { client } from '../lib/sanity.server';
+import Link from 'next/link';
 
 const query = groq`
   *[_type == "post"] {
@@ -18,7 +19,12 @@ function HomePage(props) {
     <div>
       {posts.map(({ _id, title, author }) => (
         <article key={_id}>
-          <h1>{title}</h1>
+          <Link
+            href={'/post/'.concat(_id)}
+            className='block p-4 hover:bg-gray-50 hover:text-gray-800'
+          >
+            {title}
+          </Link>
         </article>
       ))}
     </div>
