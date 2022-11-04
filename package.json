@@ -6,6 +6,9 @@
   "repository": "github.com/thisadrian/thisadrian",
   "author": "Adrian <a@thisadrian.com>",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

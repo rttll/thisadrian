@@ -14,7 +14,7 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/code-input": "^3.0.0-v3-studio.12",
+    "@sanity/code-input": "^3.0.0-v3-studio.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
