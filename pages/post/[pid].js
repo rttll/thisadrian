@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { groq } from 'next-sanity';
 import { client } from '../../lib/sanity.server';
 
+import Author from '../../components/Author';
+
 const query = groq`
   *[_type == "post"] {
     _id,
@@ -14,13 +16,16 @@ const query = groq`
   `;
 
 const Post = ({ post }) => {
-  const { title } = post;
+  const { title, author } = post;
 
   return (
     <div className='p-4'>
       <h1 className='text-6xl'>
         <Link href='/'>&larr; {title}</Link>
       </h1>
+      <div>
+        <Author author={author} />
+      </div>
     </div>
   );
 };
@@ -46,19 +51,19 @@ export async function getStaticProps(context) {
   const {
     params: { pid },
   } = context;
-  console.log('pid', pid);
   const query = groq`
-    *[_id == "${pid}"][0] {
+  *[_id == "${pid}"][0] {
+    _id,
+    title,
+    author -> {
       _id,
-      title,
-      author {
-        _id,
-        name
-      }
+      name
     }
-    `;
+  }
+  `;
 
   const post = await client.fetch(query);
+  console.log('pid', post);
 
   const props = { post };
   return {
