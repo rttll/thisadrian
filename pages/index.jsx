@@ -6,7 +6,7 @@ const query = groq`
   *[_type == "post"] {
     _id,
     title,
-    author {
+    author -> {
       _id,
       name
     }
@@ -35,6 +35,7 @@ export default HomePage;
 
 export async function getStaticProps(context) {
   const posts = await client.fetch(query);
+  console.log(posts);
   const props = { data: { posts } };
   return {
     props,
